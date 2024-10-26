@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #4CAF50, #2c3e50);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Main Layout */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* Mission Section */
+.mission {
+    background-color: #e8f5e9;
+    border-left: 8px solid #4CAF50;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    transition: transform 0.3s;
+}
+
+.mission:hover {
+    transform: scale(1.02);
+}
+
+.mission h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Team Section */
+.team {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #4CAF50;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.team-member:hover .team-img {
+    transform: rotate(10deg) scale(1.05);
+}
+
+.team h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.team p {
+    color: #666;
+    max-width: 500px;
+}
+
+/* Goals Section */
+.goals {
+    background-color: #e3f2fd;
+    border-left: 8px solid #2196f3;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.goals h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.goals ul {
+    margin-top: 15px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.goals li {
+    margin-bottom: 8px;
+}
+
+/* Background Section */
+.background {
+    background-color: #fff3e0;
+    border-left: 8px solid #FFB74D;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.background h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.background-img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Info and Button Hover Effects */
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #388E3C;
+}
+
+/* Animation for Team Section */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-member {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .team-img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .subtitle {
+        font-size: 1em;
+    }
+
+    .mission, .team, .goals, .background {
+        padding: 15px;
+    }
+}
+</style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+	<p class="subtitle">We'd love to hear from you!</p>
+  </header>
+  
+  <main>
+    <section class="contact-info">
+	   <h2>Get in Touch</h2>
+	   <p>If you have any questions or would like more information, please contact us:</p>
+            <ul>
+			    <li>Email: <a href="mailto:info@ewasteawereness.org">info@ewateawareness.org</a></li>
+				<li>Phone: +27 (068) 253 0241</li>
+				<li>Follow us on social media:</li>
+				</li>
+				      <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://twitter.com" target="_blank">Twitter</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                </li>
+            </ul>
+        </section>
+		
+       <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="submit_form.php" method="POST"> <!-- Ensure you have a server-side script to handle the form -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="map">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092684!2d144.95373531531664!3d-37.81720997975184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0e8d1fcb%3A0x5045675218cee71!2sMelbourne%20Central%20Business%20District!5e0!3m2!1sen!2sau!4v1610917804572!5m2!1sen!2sau" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Waste Awareness Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>

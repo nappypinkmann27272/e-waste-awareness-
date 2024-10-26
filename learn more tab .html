@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More - E-Waste Health Implications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .topic {
+            margin-bottom: 15px;
+        }
+
+        .topic-title {
+            background-color: #eee;
+            padding: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0;
+            color: #333;
+        }
+
+        .topic-content {
+            padding: 10px;
+            display: none; /* Hidden by default */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            background-color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn More About E-Waste</h1>
+        <p>Click each section below to explore specific topics in detail.</p>
+    </header>
+
+    <main>
+        
+        <section class="topic">
+            <h2 class="topic-title" onclick="toggleSection('section1')">Health Risks of E-Waste</h2>
+            <div id="section1" class="topic-content">
+                <p>Long-term exposure to toxins in e-waste can lead to serious health issues...</p>
+            </div>
+        </section>
+
+       
+        <section class="topic">
+            <h2 class="topic-title" onclick="toggleSection('section2')">The Lifecycle of E-Waste</h2>
+            <div id="section2" class="topic-content">
+                <p>Understanding how e-waste flows from production to disposal is essential for...</p>
+            </div>
+        </section>
+
+       
+
+    <footer>
+        <p>&copy; 2024 E-Waste Awareness Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
